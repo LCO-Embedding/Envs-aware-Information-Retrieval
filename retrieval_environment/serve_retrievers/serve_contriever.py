@@ -10,7 +10,6 @@ app = FastAPI()
 BATCH_SIZE = 128
 device = "cuda"
 
-# old A100 nas path
 tokenizer = AutoTokenizer.from_pretrained('./embedding_checkpoints/contriever')
 model = AutoModel.from_pretrained('./embedding_checkpoints/contriever').to(device)
 model.eval()
